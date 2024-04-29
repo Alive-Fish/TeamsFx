@@ -1,0 +1,27 @@
+name: Test-WebHook
+on:
+  workflow_dispatch:
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: save release info
+        run: |
+          rm -f changed.txt
+          rm -f versions.json
+          echo "@microsoft/teamsfx-server@2.0.7-beta.2024032106.0" > changed.txt
+          npx lerna ls -all --json > versions.json
+          echo "VS1710P3" > series.txt
+          echo "server.exe" > server.exe
+
+      - name: upload release info to artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release
+          path: |
+            changed.txt
+            series.txt
+            versions.json
+            *.vsix
+            *.exe
