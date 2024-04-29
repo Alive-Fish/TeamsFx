@@ -11,7 +11,7 @@ jobs:
           rm -f changed.txt
           rm -f versions.json
           echo "@microsoft/teamsfx-server@2.0.7-beta.2024032106.0" > changed.txt
-          npx lerna ls -all --json > versions.json
+          echo '[  {    "name": "@microsoft/teamsfx-api",    "version": "0.22.8-beta.2024032106.0",    "private": false,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/api"  },  {    "name": "@microsoft/eslint-plugin-teamsfx",    "version": "0.0.4",    "private": true,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/eslint-plugin-teamsfx"  },  {    "name": "@microsoft/teamsfx-core",    "version": "2.0.8-beta.2024032106.0",    "private": false,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/fx-core"  },  {    "name": "@microsoft/teams-manifest",    "version": "0.1.4-beta.2024032106.0",    "private": false,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/manifest"  },  {    "name": "@microsoft/teamsfx-server",    "version": "2.0.7-beta.2024032106.0",    "private": true,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/server"  },  {    "name": "@microsoft/m365-spec-parser",    "version": "0.1.1-beta.2024032106.0",    "private": false,    "location": "/home/runner/work/TeamsFx/TeamsFx/packages/spec-parser"  },  {    "name": "templates",    "version": "4.2.1-beta.2024032106.0",    "private": true,    "location": "/home/runner/work/TeamsFx/TeamsFx/templates"  }]' > versions.json
           echo "VS1710P3" > series.txt
           echo "server.exe" > server.exe
 
