@@ -1,6 +1,15 @@
 name: Test-WebHook
 on:
   workflow_dispatch:
+    inputs:
+      preid:
+        description: "preid name(alpha, beta, rc, stable)"
+        required: true
+        default: "rc"
+      series:
+        description: "release sprint series name"
+        required: false
+        default: ""
 
 jobs:
   cd:
